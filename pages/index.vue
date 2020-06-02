@@ -7,9 +7,13 @@
       </h1>
       <h2 class="subtitle"></h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
+        <button
+          href="https://nuxtjs.org/"
+          class="button--green"
+          @click="handleClickStaticAPI"
+        >
+          Static API
+        </button>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
@@ -24,11 +28,19 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import axios from 'axios'
 import Logo from '~/components/Logo.vue'
 
 export default Vue.extend({
   components: {
     Logo
+  },
+  methods: {
+    handleClickStaticAPI() {
+      axios.get('/api/test').then((response) => {
+        console.log(response.data)
+      })
+    }
   }
 })
 </script>
