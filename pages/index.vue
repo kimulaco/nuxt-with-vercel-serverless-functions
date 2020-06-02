@@ -8,19 +8,12 @@
       <h2 class="subtitle"></h2>
       <div class="links">
         <button
-          href="https://nuxtjs.org/"
+          type="button"
           class="button--green"
           @click="handleClickStaticAPI"
         >
           Static API
         </button>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
       </div>
     </div>
   </div>
